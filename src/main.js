@@ -105,7 +105,7 @@ function productTemplate(_product) {
           <a class="btn btn-lg btn-outline-dark buyBtn fs-6 p-3" id=${
             _product.index
           }>
-            Buy for ${_product.price.shiftedBy(-ERC20_DECIMALS).toFixed(2)} cUSD
+            Buy for ${_product.price} cUSD
           </a>
         </div>
       </div>
