@@ -5,7 +5,7 @@ import marketplaceAbi from "../contract/marketplace.abi.json"
 import erc20Abi from "../contract/erc20.abi.json"
 
 const ERC20_DECIMALS = 18
-const MPContractAddress = "0x178134c92EC973F34dD0dd762284b852B211CFC8"
+const MPContractAddress = "0x35d1d50E0eF0C579c0f3555cAd6e116DBa9c4Aa1"
 const cUSDContractAddress = "0x874069Fa1Eb16D44d622F2e0Ca25eeA172369bC1"
 
 let kit
@@ -105,7 +105,7 @@ function productTemplate(_product) {
           <a class="btn btn-lg btn-outline-dark buyBtn fs-6 p-3" id=${
             _product.index
           }>
-            Buy for ${_product.price} cUSD
+            Buy for ${_product.price.shiftedBy(-ERC20_DECIMALS).toFixed(2)} cUSD
           </a>
         </div>
       </div>
